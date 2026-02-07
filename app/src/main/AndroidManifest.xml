@@ -1,0 +1,150 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mangrove.bakajuan">
+
+    <!-- Camera -->
+    <uses-feature
+        android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- Storage / Media -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BakaJuan"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB5dPRqtcHLEsIXGJYfagiMZZ4DRU2dXHo"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.mangrove.bakajuan.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Splash Screen Activity -->
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Other Features -->
+        <activity
+            android:name=".HomeBakajuan"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".AdminUser"
+            android:label="Admin User"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+        <activity
+            android:name=".AdminLogin"
+            android:label="Admin Login"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+
+        <activity
+            android:name=".AccountSettings"
+            android:label="Account Settings" />
+
+        <activity
+            android:name=".AboutUs"
+            android:label="About Us" />
+
+        <activity
+            android:name=".AboutUs2"
+            android:label="About Us 2" />
+
+        <activity
+            android:name=".CaptureUploadBakajuan"
+            android:label="Capture or Upload Mangrove" />
+
+        <activity
+            android:name=".IdentifySplash"
+            android:label="Identify Splash" />
+
+        <activity
+            android:name=".MapSplash"
+            android:label="Map Splash" />
+
+        <activity
+            android:name=".CatalogSplash"
+            android:label="Catalog Splash" />
+
+        <activity
+            android:name=".ImageBakajuan"
+            android:label="Image Bakajuan" />
+
+        <activity
+            android:name=".MangroveInformation"
+            android:label="Mangrove Information" />
+
+        <activity
+            android:name=".IdentifyLeaf"
+            android:label="Identify Leaf" />
+
+        <activity
+            android:name=".FindMangrove"
+            android:label="Find Mangrove" />
+
+        <activity
+            android:name=".GeomapBakajuan"
+            android:label="Geomap" />
+
+        <activity
+            android:name=".GeomapInformationUser"
+            android:label="Geomap" />
+
+        <activity
+            android:name=".CatalogBakajuan"
+            android:label="Catalog" />
+
+        <activity
+            android:name=".CatalogInformation"
+            android:label="Catalog" />
+
+        <activity
+            android:name=".AdminDashboard"
+            android:label="Admin Dashboard" />
+
+        <activity
+            android:name=".AdminMangrove"
+            android:label="Admin Mangrove" />
+
+        <activity
+            android:name=".AdminMap"
+            android:label="Admin Map" />
+
+        <activity
+            android:name=".AdminCatalog"
+            android:label="Admin Catalog" />
+
+        <activity
+            android:name=".UpdateMangrove"
+            android:label="Update Mangrove" />
+
+    </application>
+</manifest>

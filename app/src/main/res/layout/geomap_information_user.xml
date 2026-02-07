@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/geomapInformation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+        <!-- Catalog Information -->
+        <LinearLayout
+            android:id="@+id/catalogOverlay"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/catalog_box"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="-5dp">
+
+                <TextView
+                    android:id="@+id/speciesID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="PG1001"
+                    android:textColor="#263B1A"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/montserratalternates_bold_font" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/vertical_line" />
+
+                <TextView
+                    android:id="@+id/localName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Bakhaw Babae"
+                    android:textColor="#263B1A"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/montserratalternates_bold_font" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <!-- Mangrove Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageBakajuan"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/unround"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Mangrove image"
+                    app:shapeAppearanceOverlay="@style/CircularImage" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <!-- Zone -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Zone: "
+                            android:textColor="#263B1A"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/montserratalternates_bolditalic_font" />
+
+                        <TextView
+                            android:id="@+id/mangroveZone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Landward"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/montserratalternates_medium_font" />
+                    </LinearLayout>
+
+
+                    <!-- Latitude -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Latitude: "
+                            android:textColor="#263B1A"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/montserratalternates_bolditalic_font" />
+
+                        <TextView
+                            android:id="@+id/speciesLatitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="13.754256"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/montserratalternates_medium_font" />
+                    </LinearLayout>
+
+                    <!-- Longitude -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Longitude: "
+                            android:textColor="#263B1A"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/montserratalternates_bolditalic_font" />
+
+                        <TextView
+                            android:id="@+id/speciesLongitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="123.754256"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/montserratalternates_medium_font" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/viewCatalog"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:background="@drawable/dialog"
+                        android:fontFamily="@font/montserratalternates_bold_font"
+                        android:text="VIEW SPECIES"
+                        android:textColor="#FFF3E5"
+                        android:textSize="12sp" />
+                      </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

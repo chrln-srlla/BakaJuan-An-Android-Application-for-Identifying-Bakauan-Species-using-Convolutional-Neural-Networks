@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/delete_red"
+        android:elevation="8dp"
+        android:padding="16dp"
+        android:layout_gravity="center"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/delete"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/deleteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you sure you want to delete Species ID?"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserratalternates_bold_font"
+            android:layout_marginTop="8dp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/yesDelete"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="#B22222"
+                android:text="Yes"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textAllCaps="false"
+                android:textColor="#FFF3E5"
+                android:textSize="13sp"
+                android:layout_marginEnd="5dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/noDelete"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:backgroundTint="#4F7942"
+                android:text="No"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textAllCaps="false"
+                android:textColor="#FFF3E5"
+                android:textSize="13sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

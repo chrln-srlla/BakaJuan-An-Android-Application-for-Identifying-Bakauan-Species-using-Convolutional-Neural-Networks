@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.BakaJuan" parent="Theme.Material3.DayNight.NoActionBar"></style>
+
+    <style name="Theme.BakaJuan" parent="Base.Theme.BakaJuan" />
+
+    <style name="CircularImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+</resources>

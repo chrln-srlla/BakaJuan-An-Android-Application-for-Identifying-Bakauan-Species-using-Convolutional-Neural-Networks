@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mangroveUserInformation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/green_line"
+        android:padding="10dp">
+
+        <!-- Image & Map Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="3dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/mangroveImage"
+                android:layout_width="100dp"
+                android:layout_height="113dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/unround"
+                android:background="@drawable/rounded_image" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/viewMap"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="#799A0B"
+                android:text="View on Map"
+                android:textAllCaps="false"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textColor="#FFF3E5"
+                android:textSize="12.5sp"
+                android:layout_marginTop="17dp"/>
+        </LinearLayout>
+
+        <!-- Text Info -->
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/localName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pagatpat"
+                android:fontFamily="@font/montserratalternates_bold_font"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/scientificName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sonneratia Alba"
+                android:fontFamily="@font/montserratalternates_mediumitalic_font"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+            <!-- Zone -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="-3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zone:"
+                    android:fontFamily="@font/montserratalternates_medium_font"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:paddingRight="5dp" />
+
+                <TextView
+                    android:id="@+id/mangroveZone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Middle"
+                    android:fontFamily="@font/montserratalternates_medium_font"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <!-- Height -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="-3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Height:"
+                    android:fontFamily="@font/montserratalternates_medium_font"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:paddingRight="5dp" />
+
+                <TextView
+                    android:id="@+id/height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="210 cm"
+                    android:fontFamily="@font/montserratalternates_medium_font"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <!-- Width -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="-3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Width:"
+                    android:fontFamily="@font/montserratalternates_medium_font"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:paddingRight="5dp"/>
+
+                <TextView
+                    android:id="@+id/width"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="115 cm"
+                    android:fontFamily="@font/montserratalternates_medium_font"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <!-- Carbon -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="-3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C02 Sequestered:"
+                    android:fontFamily="@font/montserratalternates_medium_font"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:paddingRight="5dp"/>
+
+                <TextView
+                    android:id="@+id/carbonSequestered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.4 kg"
+                    android:fontFamily="@font/montserratalternates_medium_font"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <!-- Age -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="-3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Age:"
+                    android:fontFamily="@font/montserratalternates_medium_font"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:paddingRight="5dp"/>
+
+                <TextView
+                    android:id="@+id/estimatedAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 months"
+                    android:fontFamily="@font/montserratalternates_medium_font"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="6dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/updateMangrove"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#263B1A"
+                    android:text="Update"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserratalternates_medium_font"
+                    android:textColor="#FFF3E5"
+                    android:textSize="12.5sp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/removeMangrove"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#8B0000"
+                    android:text="Remove"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserratalternates_medium_font"
+                    android:textColor="#FFF3E5"
+                    android:textSize="12.5sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

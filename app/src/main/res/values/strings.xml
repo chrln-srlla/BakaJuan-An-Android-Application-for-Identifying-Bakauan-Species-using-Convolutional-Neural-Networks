@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">BakaJuan</string>
+    <string name="BakaJuan">BakaJuan</string>
+    <string name="Baka">Baka</string>
+    <string name="Juan">Juan</string>
+    <string name="CaptureUploadMangrove">Capture or Upload Mangrove</string>
+    <string name="SpeciesID">Species ID</string>
+    <string name="MangroveMap">Mangrove Map</string>
+    <string name="HomeImage">Home Image</string>
+    <string name="GeomapImage">Geomap Image</string>
+    <string name="CatalogImage">Catalog Image</string>
+    <string name="home">Home</string>
+    <string name="geomap">Geomap</string>
+    <string name="catalog">Catalog</string>
+    <string name="account_settings"><u>Account Settings</u></string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="admin"><u>Admin</u></string>
+
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="action_settings">Settings</string>
+</resources>

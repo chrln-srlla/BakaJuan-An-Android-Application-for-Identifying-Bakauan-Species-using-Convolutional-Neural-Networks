@@ -1,0 +1,331 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="650dp"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingBottom="25dp"
+    android:paddingRight="30dp"
+    android:paddingLeft="30dp"
+    android:background="@drawable/filter_bg"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter Species"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserratalternates_bold_font"
+            android:layout_marginEnd="8dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnIdentifiable"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Identifiable"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnNonIdentifiable"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Non-Identifiable"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnBakhawBabae"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Bakhaw Babae (BB)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#799A0B"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnButaButa"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Buta-buta (BTB)"
+                android:backgroundTint="#799A0B"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnMiyapi"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Miyapi (MP)"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnPagatpat"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Pagatpat (PG)"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnPototan"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Pototan (PT)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnBakhawLalaki"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Bakhaw Lalaki (BL)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnBato"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Bakawan Bato (BKB)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnBungalon"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Bungalon (BG)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnBusain"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Busain (BS)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnLangarai"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Langarai (LG)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnApiapi"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Api-api (AP)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnTangal"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Tangal (TG)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnTabigi"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Tabigi (TB)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnNipa"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Nipa (NP)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnSagingsaging"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Saging-saging (SG)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnNilad"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Nilad (NL)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnPedada"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Pedada (PDD)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnDungonLate"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Dungon Late (DL)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnDungon"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Dungon (DN)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnBani"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Bani (BN)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnTui"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Tui (TI)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnGapasgapas"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Gapas-gapas (GP)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnNonMangroveLeaf"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="Non-Mangrove (NMS)"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textSize="15sp"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnShowAll"
+                android:layout_width="240dp"
+                android:layout_height="43dp"
+                android:text="All Species"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:backgroundTint="#799A0B"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

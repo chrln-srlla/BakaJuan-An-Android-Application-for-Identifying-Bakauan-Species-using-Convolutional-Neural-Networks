@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "234036694275",
+    "firebase_url": "https://bakajuan-cd200-default-rtdb.firebaseio.com",
+    "project_id": "bakajuan-cd200",
+    "storage_bucket": "bakajuan-cd200.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234036694275:android:ceec124b29e55efc672d36",
+        "android_client_info": {
+          "package_name": "com.mangrove.bakajuan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTvaamugT9amIPgeJl7k-gozZMOXx1PWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

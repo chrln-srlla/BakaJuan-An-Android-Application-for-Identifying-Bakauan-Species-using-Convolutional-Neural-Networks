@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adminUpdateMangrove"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background_color">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#263B1A"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="25dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backToDashboard"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/dashboard_icon"
+            android:contentDescription="Back to admin dashboard"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Baka"
+            android:fontFamily="@font/montserratalternates_medium_font"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:layout_marginLeft="80dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Juan"
+            android:fontFamily="@font/montserratalternates_bold_font"
+            android:textColor="#799A0B"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:background="@drawable/catalog_box"
+                android:elevation="3dp">
+
+                <!-- Log Mangrove Data -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:elevation="2dp"
+                    android:gravity="top"
+                    android:layout_gravity="center">
+
+                    <!-- Mangrove Information -->
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginTop="8dp"
+                                android:paddingBottom="10dp">
+
+                                <ImageView
+                                    android:id="@+id/mangroveImage"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/leaf_preview"
+                                    android:scaleType="centerCrop" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_marginTop="13dp"
+                                    android:orientation="horizontal">
+
+                                    <!-- Capture Button -->
+                                    <LinearLayout
+                                        android:id="@+id/captureMangrove"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:gravity="center"
+                                        android:background="@drawable/dashboard"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="5dp">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="60dp"
+                                            android:src="@drawable/camera_species"
+                                            android:layout_gravity="center" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="#FCEFCC"
+                                            android:layout_marginTop="1dp"
+                                            android:layout_marginBottom="1dp"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="CAPTURE SPECIES"
+                                            android:textColor="#FCEFCC"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textSize="12sp"
+                                            android:gravity="center"/>
+                                    </LinearLayout>
+
+                                    <!-- Upload Button -->
+                                    <LinearLayout
+                                        android:id="@+id/uploadMangrove"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:gravity="center"
+                                        android:background="@drawable/dashboard"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginEnd="10dp">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="60dp"
+                                            android:src="@drawable/gallery_species"
+                                            android:layout_gravity="center"/>
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="#FCEFCC"
+                                            android:layout_marginTop="1dp"
+                                            android:layout_marginBottom="1dp"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="UPLOAD SPECIES"
+                                            android:textColor="#FCEFCC"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textSize="12sp"
+                                            android:gravity="center"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Species ID & Local Name -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:layout_marginEnd="0dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Species ID"
+                                        android:textSize="13sp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/montserratalternates_medium_font"
+                                        android:layout_marginBottom="4dp" />
+
+                                    <EditText
+                                        android:id="@+id/speciesID"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="45dp"
+                                        android:background="@drawable/green_line"
+                                        android:padding="12dp"
+                                        android:fontFamily="@font/montserratalternates_medium_font"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true"
+                                        android:gravity="start|center_vertical" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_marginStart="8dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Local Name"
+                                        android:textSize="13sp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/montserratalternates_medium_font"
+                                        android:layout_marginBottom="4dp" />
+
+                                    <EditText
+                                        android:id="@+id/localName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="45dp"
+                                        android:background="@drawable/green_line"
+                                        android:padding="12dp"
+                                        android:fontFamily="@font/montserratalternates_medium_font"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true"
+                                        android:gravity="start|center_vertical" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Scientific Name -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Scientific Name"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/montserratalternates_medium_font"
+                                android:layout_marginBottom="4dp" />
+
+                            <EditText
+                                android:id="@+id/scientificName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="45dp"
+                                android:background="@drawable/green_line"
+                                android:padding="12dp"
+                                android:fontFamily="@font/montserratalternates_medium_font"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:gravity="start|center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp" />
+
+                            <!-- Zone -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zone"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/montserratalternates_medium_font"
+                                android:layout_marginBottom="4dp" />
+
+                            <EditText
+                                android:id="@+id/mangroveZone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="45dp"
+                                android:background="@drawable/green_line"
+                                android:padding="12dp"
+                                android:fontFamily="@font/montserratalternates_medium_font"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:gravity="start|center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp" />
+
+                            <!-- Mangrove Description -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Description"
+                                android:fontFamily="@font/montserratalternates_medium_font"
+                                android:textSize="13sp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_marginBottom="8dp" />
+
+                            <EditText
+                                android:id="@+id/mangroveDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:minHeight="45dp"
+                                android:background="@drawable/green_line"
+                                android:padding="12dp"
+                                android:fontFamily="@font/montserratalternates_medium_font"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:inputType="textMultiLine"
+                                android:gravity="top|start"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"/>
+
+                            <!-- Circumference & Height -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:layout_marginEnd="0dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Circumference (cm)"
+                                        android:textSize="13sp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/montserratalternates_medium_font"
+                                        android:layout_marginBottom="4dp" />
+
+                                    <EditText
+                                        android:id="@+id/circumference"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="45dp"
+                                        android:background="@drawable/green_line"
+                                        android:padding="12dp"
+                                        android:fontFamily="@font/montserratalternates_medium_font"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true"
+                                        android:gravity="start|center_vertical" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_marginStart="8dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Height (m)"
+                                        android:textSize="13sp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/montserratalternates_medium_font"
+                                        android:layout_marginBottom="4dp" />
+
+                                    <EditText
+                                        android:id="@+id/height"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="45dp"
+                                        android:background="@drawable/green_line"
+                                        android:padding="12dp"
+                                        android:fontFamily="@font/montserratalternates_medium_font"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:singleLine="true"
+                                        android:gravity="start|center_vertical" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Mangrove Estimated Carbon Sequestered -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Estimated Carbon Sequestered"
+                                android:fontFamily="@font/montserratalternates_medium_font"
+                                android:textSize="13sp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_marginBottom="8dp" />
+
+                            <EditText
+                                android:id="@+id/carbonSequestered"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="45dp"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:background="@drawable/green_line"
+                                android:padding="12dp"
+                                android:fontFamily="@font/montserratalternates_medium_font"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:singleLine="true"
+                                android:gravity="start|center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp" />
+
+                            <!-- Mangrove Estimated Age -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Estimated Age (months)"
+                                android:fontFamily="@font/montserratalternates_medium_font"
+                                android:textSize="13sp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_marginBottom="8dp" />
+
+                            <EditText
+                                android:id="@+id/estimatedAge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="45dp"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:background="@drawable/green_line"
+                                android:padding="12dp"
+                                android:fontFamily="@font/montserratalternates_medium_font"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:singleLine="true"
+                                android:gravity="start|center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp" />
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/updateCatalog"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Update to Catalog"
+                            android:textColor="#FFF3E5"
+                            android:textSize="16sp"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/montserratalternates_bold_font"
+                            android:background="@drawable/dashboard" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <!-- Log Mangrove -->
+        <LinearLayout
+            android:id="@+id/logMangrove"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/dashboard"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline25"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/log_data" />
+
+            <TextView
+                android:id="@+id/logSpecies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Mangrove"
+                android:textColor="#FCEFCC"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:fontFamily="@font/montserratalternates_bold_font" />
+        </LinearLayout>
+
+        <!-- Plot Coordinates -->
+        <LinearLayout
+            android:id="@+id/plotCoordinates"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/admin_nav"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/guideline25"
+            app:layout_constraintEnd_toStartOf="@id/guideline50"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/map_coordinates" />
+
+            <TextView
+                android:id="@+id/mapSpecies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Map\nCoordinates"
+                android:textColor="#FCEFCC"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:fontFamily="@font/montserratalternates_bold_font" />
+        </LinearLayout>
+
+        <!-- View Catalog -->
+        <LinearLayout
+            android:id="@+id/viewCatalog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/admin_nav"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/guideline50"
+            app:layout_constraintEnd_toStartOf="@id/guideline75"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:src="@drawable/catalog_admin" />
+
+            <TextView
+                android:id="@+id/catalogSpecies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mangrove\nCatalog"
+                android:textColor="#FCEFCC"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:fontFamily="@font/montserratalternates_bold_font" />
+        </LinearLayout>
+
+        <!-- Account Settings -->
+        <LinearLayout
+            android:id="@+id/accountSettings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/admin_nav"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/guideline75"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/acc_settings" />
+
+            <TextView
+                android:id="@+id/accAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Settings"
+                android:textColor="#FCEFCC"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:fontFamily="@font/montserratalternates_bold_font" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

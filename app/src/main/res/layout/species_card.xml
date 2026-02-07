@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="12dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/catalog_box">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/mangroveImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/unround"
+        android:contentDescription="Mangrove image"
+        app:shapeAppearanceOverlay="@style/CircularImage"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/speciesID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BB01"
+        android:textColor="#263B1A"
+        android:textSize="15sp"
+        android:fontFamily="@font/montserratalternates_bold_font"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/localName"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-3dp"
+        android:fontFamily="@font/montserratalternates_bold_font"
+        android:gravity="center"
+        android:text="Bakhaw Babae"
+        android:textColor="#799A0B"
+        android:textSize="13sp" />
+</LinearLayout>

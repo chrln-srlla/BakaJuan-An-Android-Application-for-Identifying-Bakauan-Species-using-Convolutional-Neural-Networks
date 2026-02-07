@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_splashscreen">
+
+    <LinearLayout
+        android:id="@+id/centerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Logo -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/logoCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="100dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/bakajuan_logo_circle"
+                android:contentDescription="Logo" />
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- As User -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continueAsUser"
+                android:layout_width="290dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#263B1A"
+                android:text="Continue as Guest"
+                android:fontFamily="@font/montserratalternates_bold_font"
+                android:textColor="#FFF3E5"
+                android:textSize="16sp"
+                app:icon="@drawable/as_user"
+                app:iconGravity="start"
+                app:iconSize="24dp"
+                app:iconPadding="0dp"
+                app:iconTint="@null"
+                app:iconStartPadding="0dp"
+                android:gravity="center"/>
+
+            <!-- As Admin -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginAsAdmin"
+                android:layout_width="290dp"
+                android:layout_height="53dp"
+                android:backgroundTint="#263B1A"
+                android:fontFamily="@font/montserratalternates_bold_font"
+                android:text="Log-in as Contributor"
+                android:textColor="#FFF3E5"
+                android:textSize="16sp"
+                app:icon="@drawable/as_admin"
+                app:iconGravity="start"
+                app:iconPadding="0dp"
+                app:iconSize="24dp"
+                app:iconTint="@null"
+                app:iconStartPadding="0dp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aboutUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="55dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:fontFamily="@font/montserratalternates_medium_font"
+            android:textColor="#263B1A"
+            android:textSize="23sp"
+            android:layout_marginRight="7dp"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/about_us"
+            android:contentDescription="About Us Icon"
+            android:layout_marginEnd="8dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

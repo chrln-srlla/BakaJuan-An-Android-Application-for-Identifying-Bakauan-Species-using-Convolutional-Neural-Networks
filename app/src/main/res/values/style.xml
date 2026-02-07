@@ -1,0 +1,11 @@
+<resources>
+    <style name="RoundedSmall">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">25dp</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="Theme.MaterialComponents.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">5%</item>
+        <item name="android:windowMinWidthMinor">5%</item>
+    </style>
+</resources>

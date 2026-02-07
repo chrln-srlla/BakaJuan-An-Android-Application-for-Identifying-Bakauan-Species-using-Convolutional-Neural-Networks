@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_splashscreen">
+
+    <LinearLayout
+        android:id="@+id/centerContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="-100dp"
+        android:layout_marginBottom="-50dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:id="@+id/scanLine"
+            android:layout_width="350dp"
+            android:layout_height="6dp"
+            android:background="@drawable/scan"
+            android:visibility="invisible"
+            android:rotation="-45"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/treeImage"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/bakaj_tree"
+            android:layout_gravity="center"
+            android:layout_marginTop="-50dp"
+            android:contentDescription="Tree Logo"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:id="@+id/bakajuanTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="-87dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baka"
+                android:textSize="36sp"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textColor="#263B1A"
+                android:shadowColor="#888"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Juan"
+                android:textSize="36sp"
+                android:fontFamily="@font/montserratalternates_bold_font"
+                android:textColor="#799A0B"
+                android:shadowColor="#888"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/typeWriterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:text=""
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserratalternates_mediumitalic_font"
+            android:textColor="#263B1A"
+            android:shadowColor="#888"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/dashboard"
+    android:elevation="8dp"
+    android:padding="16dp"
+    android:layout_gravity="center"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/correct_icon"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log-in!"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserratalternates_bold_font"
+        android:layout_marginTop="8dp"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You logged in to Bakajuan Admin"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserratalternates_medium_font"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:maxLines="2"
+        android:ellipsize="end" />
+</LinearLayout>

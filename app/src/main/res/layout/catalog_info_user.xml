@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mangroveUserInformation"
+    android:layout_width="365dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@drawable/catalog_box"
+    android:elevation="2dp"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/mangroveImage"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:src="@drawable/unround"
+        app:shapeAppearanceOverlay="@style/CircularImage"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:contentDescription="Mangrove image"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="10dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:paddingStart="0dp">
+
+            <TextView
+                android:id="@+id/localName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_bold_font"
+                android:text="Pagatpat"
+                android:textColor="#263B1A"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/speciesIDLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID: "
+                android:fontFamily="@font/montserratalternates_bold_font"
+                android:textColor="#263B1A"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@id/speciesID"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/speciesID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PG1001"
+                android:fontFamily="@font/montserratalternates_bold_font"
+                android:textColor="#263B1A"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/mangroveDescription"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserratalternates_medium_font"
+            android:text="Upper surface is smooth, dark green; under surface is smooth light green; blades are obovate to round; 8 cm long, 7 cm wide."
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:paddingRight="10dp"
+            android:justificationMode="inter_word" />
+
+        <!-- Spacer to push arrow down -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Arrow image at the bottom -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:src="@drawable/arrow"
+            android:layout_gravity="end"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+</LinearLayout>

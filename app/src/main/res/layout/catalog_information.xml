@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/catalogInformation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#263B1A"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="25dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back"
+            android:contentDescription="Back to mangrove catalog"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Baka"
+            android:fontFamily="@font/montserratalternates_medium_font"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:layout_marginLeft="130dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Juan"
+            android:fontFamily="@font/montserratalternates_bold_font"
+            android:textColor="#799A0B"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="1dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:elevation="2dp"
+                    android:gravity="center">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/mangroveImage"
+                        android:layout_width="290dp"
+                        android:layout_height="280dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/unround"
+                        app:shapeAppearanceOverlay="@style/CircularImage"
+                        android:contentDescription="Mangrove image"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="17dp" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="-20dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:backgroundTint="@android:color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/localName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserratalternates_bold_font"
+                                android:text="Pagatpat"
+                                android:textColor="#263B1A"
+                                android:textSize="32sp"
+                                android:layout_gravity="center"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ID: "
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/montserratalternates_bold_font"
+                                    android:textSize="20sp"
+                                    android:textColor="#263B1A" />
+
+                                <TextView
+                                    android:id="@+id/speciesID"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" PG1001"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/montserratalternates_bold_font"
+                                    android:textSize="20sp"
+                                    android:textColor="#263B1A" />
+
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/locateMangrove"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#263B1A"
+                                android:fontFamily="@font/montserratalternates_medium_font"
+                                android:text="Locate Mangrove"
+                                android:textColor="#FFFFFF"
+                                android:textSize="17sp"
+                                app:icon="@drawable/locate"
+                                app:iconGravity="textEnd"
+                                app:iconTint="@null"
+                                app:iconSize="25dp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:gravity="center"
+                                android:layout_gravity="center">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/mangroveDescription"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserratalternates_medium_font"
+                                        android:text="Upper surface is smooth, dark green; under surface is smooth light green; blades are obovate to round; 8 cm long, 7 cm wide."
+                                        android:textColor="@color/black"
+                                        android:layout_marginBottom="5dp"
+                                        android:paddingRight="5dp"
+                                        android:justificationMode="inter_word"
+                                 android:textSize="15sp"/>
+                                </LinearLayout>
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:stretchColumns="2">
+
+                                    <TableRow>
+                                        <TextView
+                                            android:text="Scientific Name"
+                                            android:layout_marginBottom="-1dp"
+                                            android:fontFamily="@font/montserratalternates_bold_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp" />
+
+                                        <TextView
+                                            android:text=":"
+                                            android:paddingHorizontal="6dp"
+                                            android:layout_marginBottom="-1dp"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp" />
+
+                                        <TextView
+                                            android:id="@+id/scientificName"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="-1dp"
+                                            android:layout_weight="1"
+                                            android:maxLines="2"
+                                            android:ellipsize="none"
+                                            android:fontFamily="@font/montserratalternates_mediumitalic_font"
+                                            android:text="Rhizophora mucronata"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp" />
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TextView
+                                            android:text="Zone"
+                                            android:fontFamily="@font/montserratalternates_bold_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp" />
+                                        <TextView
+                                            android:text=":"
+                                            android:paddingHorizontal="6dp"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp" />
+                                        <TextView
+                                            android:id="@+id/mangroveZone"
+                                            android:text="Seaward"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp" />
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:id="@+id/latitudeRow"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:text="Latitude"
+                                            android:fontFamily="@font/montserratalternates_bold_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:text=":"
+                                            android:paddingHorizontal="6dp"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:id="@+id/latitude"
+                                            android:text="13.165342"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:id="@+id/longitudeRow"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:text="Longitude"
+                                            android:fontFamily="@font/montserratalternates_bold_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:text=":"
+                                            android:paddingHorizontal="6dp"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:id="@+id/longitude"
+                                            android:text="123.165342"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TextView
+                                            android:text="Height"
+                                            android:fontFamily="@font/montserratalternates_bold_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:text=":"
+                                            android:paddingHorizontal="6dp"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:id="@+id/height"
+                                            android:text="5cm"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TextView
+                                            android:text="Circumference"
+                                            android:fontFamily="@font/montserratalternates_bold_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:text=":"
+                                            android:paddingHorizontal="6dp"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:id="@+id/circumference"
+                                            android:text="3cm"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TextView
+                                            android:text="Est. C. Seq."
+                                            android:fontFamily="@font/montserratalternates_bold_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:text=":"
+                                            android:paddingHorizontal="6dp"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:id="@+id/carbonSequestered"
+                                            android:text="5kgCO2"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TextView
+                                            android:text="Est. Age"
+                                            android:fontFamily="@font/montserratalternates_bold_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:text=":"
+                                            android:paddingHorizontal="6dp"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:id="@+id/estimatedAge"
+                                            android:text="3 months old"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp" />
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TextView
+                                            android:text="Date Catalogue"
+                                            android:fontFamily="@font/montserratalternates_bold_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:text=":"
+                                            android:paddingHorizontal="6dp"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp"/>
+                                        <TextView
+                                            android:id="@+id/dateCatalogued"
+                                            android:text="3 months old"
+                                            android:fontFamily="@font/montserratalternates_medium_font"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:layout_marginBottom="-1dp" />
+                                    </TableRow>
+
+                                </TableLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@drawable/footer_nav_bg"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Home -->
+        <LinearLayout
+            android:id="@+id/navHomeContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.25">
+
+            <ImageButton
+                android:id="@+id/navHome"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:contentDescription="@string/HomeImage"
+                android:scaleType="centerInside"
+                android:src="@drawable/home_white"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- Geomap-->
+        <LinearLayout
+            android:id="@+id/navGeomapContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/navHomeContainer"
+            app:layout_constraintEnd_toStartOf="@id/navCatalogContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.25">
+
+            <ImageButton
+                android:id="@+id/navGeomap"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:contentDescription="@string/GeomapImage"
+                android:scaleType="centerInside"
+                android:src="@drawable/map"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/geomap"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- Catalog -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/navCatalogContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/navHomeContainer"
+            app:layout_constraintEnd_toStartOf="@id/navCatalogContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.25">
+
+            <ImageButton
+                android:id="@+id/navCatalog"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/catalog_green"
+                android:src="@drawable/catalog_green"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/CatalogImage"
+                android:elevation="12dp"
+                android:layout_marginTop="-30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/catalogLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="@string/catalog"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:textColor="#799A0B"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Capture/Button -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mangroveCaptureUpload"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="6dp"
+        android:translationZ="5dp"
+        app:strokeWidth="0dp"
+        android:layout_marginBottom="-18dp"
+        android:backgroundTint="#799A0B"
+        android:clickable="true"
+        android:focusable="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="@id/rightButtonAnchor"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:layout_marginTop="-1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:contentDescription="@string/CaptureUploadMangrove"
+            android:src="@drawable/capture_upload"
+            android:background="@android:color/transparent" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightButtonAnchor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.708" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

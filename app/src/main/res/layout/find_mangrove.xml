@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/findMangrove"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background_color">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#263B1A"
+        android:gravity="center_vertical"
+        android:paddingStart="25dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backToHome"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back"
+            android:contentDescription="Back to mangrove catalog"/>
+
+        <TextView
+            android:id="@+id/Baka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baka"
+            android:fontFamily="@font/montserratalternates_medium_font"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:layout_marginLeft="130dp"/>
+
+        <TextView
+            android:id="@+id/Juan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Juan"
+            android:fontFamily="@font/montserratalternates_bold_font"
+            android:textColor="#799A0B"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+    <!-- Scrollable -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <!-- Information Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/mangrove_tree_mapping"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find a mangrove tree"
+                android:fontFamily="@font/montserratalternates_bold_font"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:layout_width="375dp"
+                android:layout_height="1dp"
+                android:src="@drawable/line"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="-5dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/coastal_tree"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Go to CWCH\n Coastal Areas"
+                        android:fontFamily="@font/montserratalternates_bolditalic_font"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="15sp"
+                        android:maxLines="2"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="35dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/brackish_mangrove"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Look for \nBrackish Water"
+                        android:fontFamily="@font/montserratalternates_bolditalic_font"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="15sp"
+                        android:maxLines="2"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="-5dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="135dp"
+                        android:layout_height="135dp"
+                        android:src="@drawable/root_find"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Observe the \nRoot System"
+                        android:fontFamily="@font/montserratalternates_bolditalic_font"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="15sp"
+                        android:maxLines="2"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="35dp">
+
+                    <ImageView
+                        android:layout_width="135dp"
+                        android:layout_height="135dp"
+                        android:src="@drawable/leaf_mangrove"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Identify \nLeaf Type"
+                        android:fontFamily="@font/montserratalternates_bolditalic_font"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="15sp"
+                        android:maxLines="2"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="-5dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:src="@drawable/mangrove_map"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Use GPS or \nMapping \nTools"
+                        android:fontFamily="@font/montserratalternates_bolditalic_font"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-10dp"
+                        android:textSize="15sp"
+                        android:maxLines="3"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="25dp">
+
+                    <ImageView
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:src="@drawable/mangrove_field_guide"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Check Local \nRegulations \nor Guides"
+                        android:fontFamily="@font/montserratalternates_bolditalic_font"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="15sp"
+                        android:maxLines="3"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

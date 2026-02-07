@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/catalogBakajuan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#263B1A"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingEnd="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratalternates_medium_font"
+            android:text="@string/Baka"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratalternates_bold_font"
+            android:text="@string/Juan"
+            android:textColor="#799A0B"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loadingSpecies"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/progress_color"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="1dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Search & Filter -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <!-- Search Bar -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/catalog_box"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <!-- Search -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:contentDescription="Search Icon"
+                            android:src="@drawable/search_sid" />
+
+                        <EditText
+                            android:id="@+id/searchID"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/montserratalternates_medium_font"
+                            android:hint="Species ID"
+                            android:inputType="text"
+                            android:paddingVertical="0dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="#999999"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/searchButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:background="@drawable/search_button"
+                        android:fontFamily="@font/montserratalternates_medium_font"
+                        android:gravity="center"
+                        android:paddingHorizontal="20dp"
+                        android:text="Search"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Filter -->
+                <ImageView
+                    android:id="@+id/filter"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/filter_button_bg"
+                    android:contentDescription="Filter"
+                    android:elevation="5dp"
+                    android:padding="6dp"
+                    android:src="@drawable/filterg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lineIdentifiableSpecies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#799A0B" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:contentDescription="Leaf Icon"
+                    android:src="@drawable/leaves" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#799A0B" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/noSpecies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No species found"
+                android:fontFamily="@font/montserratalternates_bolditalic_font"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- Bakauan Identification -->
+            <LinearLayout
+                android:id="@+id/textIdentifiableSpecies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintTop_toBottomOf="@id/speciesScroll"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/identifiable"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Identifiable Species"
+                    android:fontFamily="@font/montserratalternates_bold_font"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/identifiableSpecies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:elevation="3dp">
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/seeMoreIdentifiable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See More"
+                android:textColor="#799A0B"
+                android:textSize="13sp"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:visibility="gone"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/lineNonIdentifiableSpecies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#799A0B" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:contentDescription="Leaf Icon"
+                    android:src="@drawable/leaves" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#799A0B" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/textNonIdentifiableSpecies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/nonidentifiable"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Miscellaneous leaf"
+                    android:fontFamily="@font/montserratalternates_bold_font"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nonIdentifiableSpecies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="10dp"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:elevation="3dp">
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/seeMoreNonIdentifiable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See More"
+                android:textColor="#799A0B"
+                android:textSize="13sp"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:visibility="gone"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@drawable/footer_nav_bg"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Home -->
+        <LinearLayout
+            android:id="@+id/navHomeContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25">
+
+            <ImageButton
+                android:id="@+id/navHome"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:contentDescription="@string/HomeImage"
+                android:scaleType="centerInside"
+                android:src="@drawable/home_white"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:text="@string/home"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Geomap -->
+        <LinearLayout
+            android:id="@+id/navGeomapContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/navCatalogContainer"
+            app:layout_constraintStart_toEndOf="@id/navHomeContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25">
+
+            <ImageButton
+                android:id="@+id/navGeomap"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:contentDescription="@string/GeomapImage"
+                android:scaleType="centerInside"
+                android:src="@drawable/map"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:text="@string/geomap"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Catalog -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/navCatalogContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/navCatalogContainer"
+            app:layout_constraintStart_toEndOf="@id/navHomeContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25">
+
+            <ImageButton
+                android:id="@+id/navCatalog"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="-30dp"
+                android:background="@drawable/catalog_green"
+                android:contentDescription="@string/CatalogImage"
+                android:elevation="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/catalog_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/catalogLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/montserratalternates_medium_font"
+                android:text="@string/catalog"
+                android:textColor="#799A0B"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Capture/Button -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mangroveCaptureUpload"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-18dp"
+        android:backgroundTint="#799A0B"
+        android:clickable="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:focusable="true"
+        android:translationZ="5dp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/rightButtonAnchor"
+        app:layout_constraintWidth_percent="0.15"
+        app:strokeWidth="0dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="-1dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="1dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/CaptureUploadMangrove"
+            android:scaleType="centerInside"
+            android:src="@drawable/capture_upload" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightButtonAnchor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.708" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
