@@ -1,0 +1,1 @@
+BakaJuan is an Android-based application developed to accurately identify specific Bakauan (mangrove) species through deep learning (CNN) that provide features for identification, cataloging, and mapping for guest and contributor users, addressing the challenge of identifying suitable planting zones, thereby enhancing mangrove conservation efforts.
